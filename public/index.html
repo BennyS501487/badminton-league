@@ -1,1 +1,198 @@
+<!DOCTYPE html>
 
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Badminton League</title><style>
+:root{--bg:#0b1320;--panel:#121d2d;--panel2:#182638;--line:rgba(255,255,255,.09);--text:#f4f7fb;--muted:#98a9bd;--green:#6fe0ad;--blue:#6bbcff;--gold:#ffd36a;--red:#ff9c9c;--shadow:0 16px 34px rgba(0,0,0,.24)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#08101a,#0b1320);color:var(--text)}.shell{max-width:1280px;margin:0 auto;padding:28px}header{display:flex;justify-content:space-between;gap:24px;align-items:end;padding:8px 2px 22px}.brand small{display:block;color:var(--green);text-transform:uppercase;letter-spacing:.16em;font-weight:800;font-size:11px;margin-bottom:8px}.brand h1{margin:0;font-size:34px}.brand p{margin:8px 0 0;color:var(--muted)}.updated{color:var(--muted);font-size:13px;border:1px solid var(--line);padding:9px 12px;border-radius:999px}.tabs{display:flex;gap:8px;padding:8px;background:#0e1827;border:1px solid var(--line);border-radius:16px;margin-bottom:20px;position:sticky;top:8px;z-index:5;box-shadow:var(--shadow)}.tab-btn{flex:1;border:0;background:transparent;color:var(--muted);cursor:pointer;padding:12px 14px;border-radius:11px;font-weight:800;font-size:14px}.tab-btn.active{background:#1a2a3f;color:var(--text)}.tab-panel{display:none}.tab-panel.active{display:block}.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}.overview-grid{display:grid;grid-template-columns:1.5fr .85fr;gap:18px}.hero-card{padding:26px}.kicker{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:800}.hero-title{margin:7px 0 6px;font-size:34px}.hero-sub{color:var(--muted);margin:0}.latest{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.metric{padding:14px;border-radius:14px;background:var(--panel2);border:1px solid var(--line)}.metric span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}.metric strong{display:block;font-size:20px;margin-top:6px}.side-summary{padding:22px}.side-summary h3{margin:0 0 16px}.summary-item{display:flex;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid var(--line)}.summary-item:last-child{border-bottom:0}.summary-item span{color:var(--muted)}.summary-item strong{text-align:right}.section-title{margin:0 0 12px;font-size:20px}.clean-table{width:100%;border-collapse:collapse}.clean-table th,.clean-table td{padding:13px 12px;border-bottom:1px solid var(--line);text-align:left}.clean-table th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.09em}.clean-table tr:last-child td{border-bottom:0}.pos{width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;margin-right:10px;border-radius:50%;background:#20334b;color:var(--blue);font-weight:900;font-size:12px}.standings-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.table-card{padding:20px}.table-card.full{grid-column:1/-1}.h2h-layout{display:grid;grid-template-columns:1.25fr .75fr;gap:18px}.matrix-card{padding:20px;overflow:auto}.matrix-help{color:var(--muted);margin:0 0 16px;font-size:13px}.matrix{width:100%;min-width:650px;border-collapse:separate;border-spacing:6px}.matrix th{color:var(--muted);font-size:12px;padding:8px;text-align:center}.matrix td{text-align:center;border-radius:12px;padding:14px 8px;min-width:85px;border:1px solid var(--line)}.matrix td strong{display:block;font-size:18px}.matrix td span{display:block;margin-top:4px;font-size:11px;opacity:.72}.matrix-win{background:rgba(111,224,173,.11);color:#bdf7dc}.matrix-loss{background:rgba(255,156,156,.09);color:#ffc4c4}.matrix-draw{background:rgba(255,211,106,.09);color:#ffe5a1}.matrix-none,.matrix-self{background:#101a28;color:#617188}.pairs-card{padding:20px}.pair-list{display:grid;gap:10px;max-height:560px;overflow:auto}.pair-card{border:1px solid var(--line);border-radius:14px;background:#101a28;padding:13px}.pair-names{display:flex;gap:8px;align-items:center}.pair-names span{color:var(--muted);font-size:12px}.pair-line{margin-top:7px;font-weight:800}.pair-meta{margin-top:3px;color:var(--muted);font-size:12px}.weeks-list{display:grid;gap:14px}.week-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden}.week-top{display:flex;justify-content:space-between;gap:20px;padding:18px 20px;background:#111c2b;align-items:center}.week-number{font-weight:900;font-size:18px}.week-note{color:var(--muted);font-size:13px;margin-top:4px}.week-winners{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.week-winners span{padding:8px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px}.week-winners strong{color:var(--text);margin:0 4px}.week-body{display:grid;grid-template-columns:1.2fr 1fr .7fr;gap:14px;padding:14px}.week-block{border:1px solid var(--line);background:#0f1927;border-radius:14px;padding:14px}.week-block h4{margin:0 0 10px}.compact-results{margin:0;padding-left:18px}.compact-results li{margin:6px 0;font-size:13px;color:#dce5f0}.mini{width:100%;border-collapse:collapse;margin-top:12px}.mini th,.mini td{padding:7px 6px;border-top:1px solid var(--line);text-align:left;font-size:12px}.mini th{color:var(--muted)}.muted-box{color:var(--muted);font-size:13px;padding:10px 0}.legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;color:var(--muted);font-size:12px}.legend span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px}.legend .lwin::before{background:rgba(111,224,173,.55)}.legend .lloss::before{background:rgba(255,156,156,.55)}.legend .ldraw::before{background:rgba(255,211,106,.55)}
+@media(max-width:950px){.overview-grid,.standings-grid,.h2h-layout,.week-body{grid-template-columns:1fr}.table-card.full{grid-column:auto}.latest{grid-template-columns:1fr}header{align-items:start;flex-direction:column}.tabs{overflow-x:auto}.tab-btn{min-width:130px}}
+
+/* Clearly distinguish special matches from badminton league games */
+.sport-chip{display:inline-block;margin-right:7px;padding:3px 6px;border-radius:6px;background:rgba(255,211,106,.14);color:var(--gold);font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+.bonus-caption{color:var(--muted);font-size:12px;line-height:1.35;margin:11px 0 0}
+.special-result{font-size:13px;line-height:1.7}
+
+/* Week 6 celebration – Benny shares the 2–1 singles title with Ben Hull and Dale. */
+.week6-celebration{border-color:rgba(251,203,94,.50);box-shadow:0 0 0 1px rgba(251,203,94,.12),0 16px 40px rgba(0,0,0,.22)}
+.week6-celebration .week-top{display:grid;grid-template-columns:minmax(200px,.7fr) minmax(0,1.65fr);align-items:center;gap:22px;padding:21px 22px;background:linear-gradient(105deg,#15253a,#1c273c 58%,#282634)}
+.week6-celebration .week-number{font-size:22px}
+.week6-celebration .week-note{max-width:310px;line-height:1.5}
+.week6-awards{display:grid;grid-template-columns:minmax(0,1fr) 124px;gap:12px;align-items:stretch}
+.week6-singles-award{min-width:0;border:1px solid rgba(251,203,94,.39);border-radius:16px;padding:11px;background:linear-gradient(120deg,rgba(90,62,25,.34),rgba(40,32,40,.75))}
+.week6-award-heading{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:10px;color:#fff0b6;font-size:10px;font-weight:900;letter-spacing:.09em}
+.week6-tie{font-size:10px!important;white-space:nowrap;color:#eacaa1!important;letter-spacing:0!important;border:0!important;padding:0!important}
+.week6-award-names{display:flex;align-items:center;justify-content:center;gap:17px}
+.benny-marquee{position:relative;isolation:isolate;flex:0 1 228px;min-width:158px;text-align:center;padding:11px 18px 13px;border:2px solid #ffdc72;border-radius:15px;background:radial-gradient(ellipse at 50% 0%,rgba(255,225,111,.28),transparent 68%),linear-gradient(145deg,#573716,#291e19 80%);box-shadow:0 0 23px rgba(255,203,75,.33),inset 0 0 16px rgba(255,213,87,.13);transform:rotate(-2deg);animation:benny-float 3.2s ease-in-out infinite}
+.benny-marquee:before{content:"";position:absolute;inset:-7px;border:3px dotted rgba(255,233,132,.95);border-radius:19px;box-shadow:0 0 11px rgba(255,215,86,.67);pointer-events:none;animation:benny-lights 1.9s ease-in-out infinite alternate}
+.benny-overline{font-size:8px;letter-spacing:.08em;color:#ffe7ac;font-weight:900;white-space:nowrap}
+.benny-headline{font-size:clamp(23px,2.2vw,33px);font-weight:1000;letter-spacing:.03em;white-space:nowrap;line-height:1.32;background:linear-gradient(100deg,#fff4ab,#ffce5b 36%,#fffefa 50%,#ffce5b 65%,#fff4ab);background-size:190% auto;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:.15px #fff4b9;filter:drop-shadow(0 0 9px rgba(255,211,73,.65));animation:benny-shimmer 4s linear infinite}
+.benny-headline span{font-size:19px;-webkit-text-stroke:0}
+.benny-caption{font-size:9px;font-weight:900;letter-spacing:.08em;color:#ffe3a6;white-space:nowrap}
+.twinkle{position:absolute;font-style:normal;pointer-events:none;color:#fff7cc;text-shadow:0 0 8px #ffe168;animation:benny-glitter 2.6s ease-in-out infinite alternate}
+.t1{top:-22px;left:-14px;font-size:21px}.t2{top:2px;right:-25px;font-size:29px;animation-delay:.7s}.t3{bottom:-22px;right:18px;font-size:24px;animation-delay:1.2s}
+.joint-winners{display:grid;gap:6px;min-width:115px;text-align:center;align-items:center}
+.joint-winners>span{font-size:9px!important;letter-spacing:.08em;font-weight:850!important;color:#9fb2ca!important;white-space:nowrap;border:0!important;padding:0!important}
+.joint-winners strong{font-size:17px;color:#f4f7fb;line-height:1.2;margin:0!important}
+.joint-winners em{font-style:normal;color:#8f9eb2}
+.joint-winners small{font-size:11px;color:#9fb2ca}
+.week6-doubles-award{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;text-align:center;border:1px solid var(--line);border-radius:15px;background:rgba(13,24,35,.55);padding:11px}
+.week6-doubles-award span{font-size:9px;letter-spacing:.06em;color:var(--muted);font-weight:850}
+.week6-doubles-award strong{font-size:24px;color:var(--green)}
+.week6-doubles-award small{font-size:11px;color:var(--muted)}
+.benny-overview-metric{background:radial-gradient(circle at 25% 0%,rgba(255,211,106,.18),transparent 85%),#222431;border:1px solid rgba(255,213,106,.55);box-shadow:0 0 19px rgba(255,206,88,.09)}
+.benny-mini{font-size:25px!important;letter-spacing:.04em;color:#ffe393!important;text-shadow:0 0 12px rgba(255,221,115,.58);white-space:nowrap}
+.benny-mini-detail{font-size:12px;color:#e1cfa3;line-height:1.55;margin-top:5px}
+.benny-mini-detail b{color:#ffedae;font-weight:750}
+@keyframes benny-float{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-3px)}}
+@keyframes benny-lights{from{opacity:.55;filter:brightness(.8)}to{opacity:1;filter:brightness(1.35)}}
+@keyframes benny-shimmer{from{background-position:175% center}to{background-position:-25% center}}
+@keyframes benny-glitter{from{opacity:.35;transform:scale(.84)}to{opacity:1;transform:scale(1.18)}}
+@media(max-width:1180px){.week6-celebration .week-top{grid-template-columns:1fr}.week6-celebration .week-note{max-width:none}}
+@media(max-width:680px){.week6-awards{grid-template-columns:1fr}.week6-award-names{gap:13px}.benny-marquee{min-width:145px;padding:11px 12px}.joint-winners strong{font-size:15px}.week6-doubles-award{flex-direction:row;gap:10px}}
+@media(prefers-reduced-motion:reduce){.benny-marquee,.benny-marquee:before,.benny-headline,.twinkle{animation:none!important}}
+
+/* Week 7 enhancements */
+.week7-new .week-top{border-left:4px solid var(--green);background:linear-gradient(100deg,rgba(111,224,173,.075),transparent 55%),#111c2b}
+.week7-new .week-winners span:first-child{border-color:rgba(111,224,173,.40);color:#baf0d6}
+.week7-new .week-winners strong{color:#f5fafb}
+#h2h .h2h-layout{grid-template-columns:minmax(0,1.65fr) minmax(290px,.7fr)}
+#h2h .matrix{min-width:780px;border-spacing:4px}
+#h2h .matrix td{min-width:84px;padding:12px 6px}
+#overview .metric strong{overflow-wrap:anywhere}
+#overview .metric-note{display:block;font-size:12px;color:var(--muted);margin-top:6px}
+@media(max-width:1250px){#h2h .h2h-layout{grid-template-columns:1fr}#h2h .pair-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-height:none;overflow:visible}}
+@media(max-width:700px){.shell{padding:15px}#h2h .matrix{min-width:780px}#h2h .pair-list{grid-template-columns:1fr}.week7-new .week-top{flex-direction:column;align-items:start}.week7-new .week-winners{justify-content:flex-start}}
+
+/* Week 8 records */
+.week8-new .week-top{border-left:4px solid #e9b978;background:linear-gradient(100deg,rgba(239,181,108,.065),transparent 54%),#111c2b}
+.week8-record{display:flex;align-items:center;gap:14px;margin:14px 14px 0;padding:14px 18px;border:1px solid rgba(239,181,108,.32);border-radius:14px;background:linear-gradient(100deg,rgba(234,166,80,.15),rgba(234,166,80,.035));}
+.week8-record-icon{font-size:26px;line-height:1}
+.week8-record small{display:block;color:#e4bf8e;font-size:10px;font-weight:800;letter-spacing:.10em;margin-bottom:3px}
+.week8-record-main{font-size:19px;font-weight:800;color:#fff1d6}
+.week8-record-main strong{color:#ffd78c;font-size:24px}
+.week8-record-sub{font-size:12px;color:var(--muted);margin-top:3px}
+.score-marker{display:inline-block;margin-left:4px;padding:2px 6px;font-style:normal;font-size:12px;border-radius:6px;background:rgba(241,187,112,.14);color:#ffd78c;font-weight:800}
+.week8-scoreline strong{color:#ffd78c!important}
+@media(max-width:700px){.week8-new .week-top{flex-direction:column;align-items:start}.week8-new .week-winners{justify-content:start}}
+</style></head><body><div class="shell">
+<header><div class="brand"><small>Badminton League</small><h1>Weekly Scoreboard</h1></div><div class="updated">Updated through Week 8</div></header>
+<nav class="tabs"><button class="tab-btn active" data-tab="overview">Overview</button><button class="tab-btn" data-tab="standings">Standings</button><button class="tab-btn" data-tab="h2h">Head-to-Head</button><button class="tab-btn" data-tab="weeks">Weeks</button></nav>
+<main>
+<section class="tab-panel active" id="overview"><div class="overview-grid"><div class="card hero-card"><div class="kicker">Current leader</div><div class="hero-title">Dale Cobley</div><p class="hero-sub">40 wins · 10 losses · 80% overall</p><div class="latest">
+<div class="metric"><span>Week 8 singles champion</span><strong>Dale · 3–0</strong></div>
+<div class="metric"><span>Singles leader</span><strong>Dale · 27–4</strong></div>
+<div class="metric"><span>Week 8 doubles champions</span><strong>Dale · Chris · Ben Hull</strong><small class="metric-note">Joint winners · 2–1 each</small></div>
+</div></div><div class="card side-summary"><h3>Week 8 · latest results</h3>
+<div class="summary-item"><span>Singles champion</span><strong>Dale · 3–0</strong></div>
+<div class="summary-item"><span>Chris</span><strong>2–1 singles</strong></div>
+<div class="summary-item"><span>Ben Hull</span><strong>1–2 singles</strong></div>
+<div class="summary-item"><span>Benny</span><strong>0–3 singles · 0–3 doubles</strong></div>
+<div class="summary-item"><span>Doubles</span><strong>Three-way tie · 2–1 each</strong></div>
+<div class="summary-item week8-scoreline"><span>Biggest recorded defeat</span><strong>Dale 11–1 Chris</strong></div>
+</div></div><div class="card table-card" style="margin-top:18px"><h2 class="section-title">Top of the table</h2><table class="clean-table"><thead><tr><th>Player</th><th>W</th><th>L</th><th>Win %</th></tr></thead><tbody><tr><td><span class="pos">1</span> Dale Cobley</td><td>40</td><td>10</td><td>80%</td></tr><tr><td><span class="pos">2</span> Christian Barton</td><td>28</td><td>23</td><td>54.9%</td></tr><tr><td><span class="pos">3</span> Ben Hull</td><td>20</td><td>17</td><td>54.1%</td></tr><tr><td><span class="pos">4</span> Owen Jones</td><td>3</td><td>3</td><td>50%</td></tr><tr><td><span class="pos">5</span> Benny</td><td>8</td><td>42</td><td>16%</td></tr><tr><td><span class="pos">6</span> Matt</td><td>0</td><td>4</td><td>0%</td></tr></tbody></table></div></section>
+<section class="tab-panel" id="standings"><div class="standings-grid"><div class="card table-card full"><h2 class="section-title">Overall</h2><table class="clean-table"><thead><tr><th>Player</th><th>W</th><th>L</th><th>Win %</th><th>Weeks</th></tr></thead><tbody><tr><td><span class="pos">1</span> Dale Cobley</td><td>40</td><td>10</td><td>80%</td><td>8</td></tr><tr><td><span class="pos">2</span> Christian Barton</td><td>28</td><td>23</td><td>54.9%</td><td>8</td></tr><tr><td><span class="pos">3</span> Ben Hull</td><td>20</td><td>17</td><td>54.1%</td><td>6</td></tr><tr><td><span class="pos">4</span> Owen Jones</td><td>3</td><td>3</td><td>50%</td><td>1</td></tr><tr><td><span class="pos">5</span> Benny</td><td>8</td><td>42</td><td>16%</td><td>8</td></tr><tr><td><span class="pos">6</span> Matt</td><td>0</td><td>4</td><td>0%</td><td>1</td></tr></tbody></table></div><div class="card table-card"><h2 class="section-title">Singles</h2><table class="clean-table"><thead><tr><th>Player</th><th>W</th><th>L</th><th>Win %</th></tr></thead><tbody><tr><td><span class="pos">1</span> Dale Cobley</td><td>27</td><td>4</td><td>87.1%</td></tr><tr><td><span class="pos">2</span> Owen Jones</td><td>2</td><td>1</td><td>66.7%</td></tr><tr><td><span class="pos">3</span> Ben Hull</td><td>11</td><td>10</td><td>52.4%</td></tr><tr><td><span class="pos">4</span> Christian Barton</td><td>16</td><td>16</td><td>50%</td></tr><tr><td><span class="pos">5</span> Benny</td><td>5</td><td>26</td><td>16.1%</td></tr><tr><td><span class="pos">6</span> Matt</td><td>0</td><td>4</td><td>0%</td></tr></tbody></table></div><div class="card table-card"><h2 class="section-title">Doubles</h2><table class="clean-table"><thead><tr><th>Player</th><th>W</th><th>L</th><th>Win %</th></tr></thead><tbody><tr><td><span class="pos">1</span> Dale Cobley</td><td>13</td><td>6</td><td>68.4%</td></tr><tr><td><span class="pos">2</span> Christian Barton</td><td>12</td><td>7</td><td>63.2%</td></tr><tr><td><span class="pos">3</span> Ben Hull</td><td>9</td><td>7</td><td>56.2%</td></tr><tr><td><span class="pos">4</span> Owen Jones</td><td>1</td><td>2</td><td>33.3%</td></tr><tr><td><span class="pos">5</span> Benny</td><td>3</td><td>16</td><td>15.8%</td></tr><tr><td><span class="pos">6</span> Matt</td><td>0</td><td>0</td><td>—</td></tr></tbody></table></div></div></section>
+<section class="tab-panel" id="h2h"><div class="h2h-layout"><div class="card matrix-card"><h2 class="section-title">Singles head-to-head matrix</h2><p class="matrix-help">Each cell is from the row player's point of view.</p><table class="matrix"><thead><tr><th></th><th>Benny</th><th>Ben Hull</th><th>Chris</th><th>Dale</th><th>Owen</th><th>Matt</th></tr></thead><tbody><tr><th>Benny</th><td class="matrix-self">—</td><td class="matrix-loss"><strong>3–4</strong><span>3/7</span></td><td class="matrix-loss"><strong>1–10</strong><span>1/11</span></td><td class="matrix-loss"><strong>0–11</strong><span>0/11</span></td><td class="matrix-loss"><strong>0–1</strong><span>0/1</span></td><td class="matrix-win"><strong>1–0</strong><span>1/1</span></td></tr><tr><th>Ben Hull</th><td class="matrix-win"><strong>4–3</strong><span>4/7</span></td><td class="matrix-self">—</td><td class="matrix-win"><strong>4–3</strong><span>4/7</span></td><td class="matrix-loss"><strong>2–4</strong><span>2/6</span></td><td class="matrix-none">—</td><td class="matrix-win"><strong>1–0</strong><span>1/1</span></td></tr><tr><th>Chris</th><td class="matrix-win"><strong>10–1</strong><span>10/11</span></td><td class="matrix-loss"><strong>3–4</strong><span>3/7</span></td><td class="matrix-self">—</td><td class="matrix-loss"><strong>2–10</strong><span>2/12</span></td><td class="matrix-loss"><strong>0–1</strong><span>0/1</span></td><td class="matrix-win"><strong>1–0</strong><span>1/1</span></td></tr><tr><th>Dale</th><td class="matrix-win"><strong>11–0</strong><span>11/11</span></td><td class="matrix-win"><strong>4–2</strong><span>4/6</span></td><td class="matrix-win"><strong>10–2</strong><span>10/12</span></td><td class="matrix-self">—</td><td class="matrix-win"><strong>1–0</strong><span>1/1</span></td><td class="matrix-win"><strong>1–0</strong><span>1/1</span></td></tr><tr><th>Owen</th><td class="matrix-win"><strong>1–0</strong><span>1/1</span></td><td class="matrix-none">—</td><td class="matrix-win"><strong>1–0</strong><span>1/1</span></td><td class="matrix-loss"><strong>0–1</strong><span>0/1</span></td><td class="matrix-self">—</td><td class="matrix-none">—</td></tr><tr><th>Matt</th><td class="matrix-loss"><strong>0–1</strong><span>0/1</span></td><td class="matrix-loss"><strong>0–1</strong><span>0/1</span></td><td class="matrix-loss"><strong>0–1</strong><span>0/1</span></td><td class="matrix-loss"><strong>0–1</strong><span>0/1</span></td><td class="matrix-none">—</td><td class="matrix-self">—</td></tr></tbody></table><div class="legend"><span class="lwin">Winning record</span><span class="lloss">Losing record</span><span class="ldraw">Tied record</span></div></div><div class="card pairs-card"><h2 class="section-title">Pairing breakdown</h2><div class="pair-list"><div class="pair-card"><div class="pair-names"><strong>Chris</strong><span>vs</span><strong>Dale</strong></div><div class="pair-line">Dale Cobley leads 10–2</div><div class="pair-meta">12 singles matches played</div></div><div class="pair-card"><div class="pair-names"><strong>Benny</strong><span>vs</span><strong>Chris</strong></div><div class="pair-line">Christian Barton leads 10–1</div><div class="pair-meta">11 singles matches played</div></div><div class="pair-card"><div class="pair-names"><strong>Benny</strong><span>vs</span><strong>Dale</strong></div><div class="pair-line">Dale Cobley leads 11–0</div><div class="pair-meta">11 singles matches played</div></div><div class="pair-card"><div class="pair-names"><strong>Ben Hull</strong><span>vs</span><strong>Chris</strong></div><div class="pair-line">Ben Hull leads 4–3</div><div class="pair-meta">7 singles matches played</div></div><div class="pair-card"><div class="pair-names"><strong>Benny</strong><span>vs</span><strong>Ben Hull</strong></div><div class="pair-line">Ben Hull leads 4–3</div><div class="pair-meta">7 singles matches played</div></div><div class="pair-card"><div class="pair-names"><strong>Ben Hull</strong><span>vs</span><strong>Dale</strong></div><div class="pair-line">Dale Cobley leads 4–2</div><div class="pair-meta">6 singles matches played</div></div><div class="pair-card"><div class="pair-names"><strong>Ben Hull</strong><span>vs</span><strong>Matt</strong></div><div class="pair-line">Ben Hull leads 1–0</div><div class="pair-meta">1 singles match played</div></div><div class="pair-card"><div class="pair-names"><strong>Benny</strong><span>vs</span><strong>Matt</strong></div><div class="pair-line">Benny leads 1–0</div><div class="pair-meta">1 singles match played</div></div><div class="pair-card"><div class="pair-names"><strong>Benny</strong><span>vs</span><strong>Owen</strong></div><div class="pair-line">Owen Jones leads 1–0</div><div class="pair-meta">1 singles match played</div></div><div class="pair-card"><div class="pair-names"><strong>Chris</strong><span>vs</span><strong>Matt</strong></div><div class="pair-line">Christian Barton leads 1–0</div><div class="pair-meta">1 singles match played</div></div><div class="pair-card"><div class="pair-names"><strong>Chris</strong><span>vs</span><strong>Owen</strong></div><div class="pair-line">Owen Jones leads 1–0</div><div class="pair-meta">1 singles match played</div></div><div class="pair-card"><div class="pair-names"><strong>Dale</strong><span>vs</span><strong>Matt</strong></div><div class="pair-line">Dale Cobley leads 1–0</div><div class="pair-meta">1 singles match played</div></div><div class="pair-card"><div class="pair-names"><strong>Dale</strong><span>vs</span><strong>Owen</strong></div><div class="pair-line">Dale Cobley leads 1–0</div><div class="pair-meta">1 singles match played</div></div><div class="pair-card"><div class="pair-names"><strong>Ben Hull</strong><span>vs</span><strong>Owen</strong></div><div class="pair-line">No singles played</div><div class="pair-meta">0 singles matches played</div></div><div class="pair-card"><div class="pair-names"><strong>Owen</strong><span>vs</span><strong>Matt</strong></div><div class="pair-line">No singles played</div><div class="pair-meta">0 singles matches played</div></div></div></div></div></section>
+<section class="tab-panel" id="weeks"><div class="weeks-list"><article class="week-card week8-new">
+<div class="week-top"><div><div class="week-number">Week 8</div><div class="week-note">Back to four players · Benny lost all matches · Dale swept singles</div></div>
+<div class="week-winners"><span>Singles <strong>Dale</strong> 3–0 · unbeaten</span><span>Doubles <strong>Dale / Chris / Ben Hull</strong> 2–1 · joint</span></div></div>
+<div class="week8-record"><div class="week8-record-icon">🏸</div><div><small>BIGGEST REPORTED DEFEAT</small><div class="week8-record-main">Dale <strong>11–1</strong> Chris</div><div class="week8-record-sub">Singles game-point score · ten-point winning margin</div></div></div>
+<div class="week-body">
+<div class="week-block"><h4>Singles · 6 matches</h4><ul class="compact-results">
+<li><strong>Dale</strong> beat Benny</li><li><strong>Dale</strong> beat Ben Hull</li><li><strong>Dale</strong> beat Chris <em class="score-marker">11–1</em></li>
+<li><strong>Chris</strong> beat Benny</li><li><strong>Chris</strong> beat Ben Hull</li><li><strong>Ben Hull</strong> beat Benny</li>
+</ul><table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody>
+<tr><td>Dale</td><td>3</td><td>0</td></tr><tr><td>Chris</td><td>2</td><td>1</td></tr><tr><td>Ben Hull</td><td>1</td><td>2</td></tr><tr><td>Benny</td><td>0</td><td>3</td></tr>
+</tbody></table></div>
+<div class="week-block"><h4>Doubles · 3 matches</h4><ul class="compact-results">
+<li><strong>Chris + Dale</strong> beat Benny + Ben Hull</li>
+<li><strong>Ben Hull + Dale</strong> beat Benny + Chris</li>
+<li><strong>Ben Hull + Chris</strong> beat Benny + Dale</li>
+</ul><table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody>
+<tr><td>Dale</td><td>2</td><td>1</td></tr><tr><td>Chris</td><td>2</td><td>1</td></tr><tr><td>Ben Hull</td><td>2</td><td>1</td></tr><tr><td>Benny</td><td>0</td><td>3</td></tr>
+</tbody></table></div>
+<div class="week-block"><h4>Bonus / non-league</h4><div class="muted-box">None recorded</div></div>
+</div></article><article class="week-card week7-new">
+<div class="week-top">
+<div><div class="week-number">Week 7</div><div class="week-note">Matt joined · five singles players · one doubles match</div></div>
+<div class="week-winners"><span>Singles <strong>Dale</strong> 5–0 · unbeaten</span><span>Doubles <strong>Ben Hull + Chris</strong> 1–0</span></div>
+</div>
+<div class="week-body">
+<div class="week-block"><h4>Singles · 13 matches</h4>
+<ul class="compact-results"><li><strong>Ben Hull</strong> beat Chris ×2</li><li><strong>Ben Hull</strong> beat Matt</li><li><strong>Benny</strong> beat Ben Hull ×2</li><li><strong>Benny</strong> beat Matt</li><li><strong>Chris</strong> beat Benny</li><li><strong>Chris</strong> beat Matt</li><li><strong>Dale</strong> beat Ben Hull</li><li><strong>Dale</strong> beat Benny</li><li><strong>Dale</strong> beat Chris ×2</li><li><strong>Dale</strong> beat Matt</li></ul>
+<table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody><tr><td>Benny</td><td>3</td><td>2</td></tr><tr><td>Ben Hull</td><td>3</td><td>3</td></tr><tr><td>Matt</td><td>0</td><td>4</td></tr><tr><td>Chris</td><td>2</td><td>4</td></tr><tr><td>Dale</td><td>5</td><td>0</td></tr></tbody></table>
+</div>
+<div class="week-block"><h4>Doubles · 1 match</h4>
+<ul class="compact-results"><li><strong>Ben Hull + Chris</strong> beat Benny + Dale</li></ul>
+<table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody><tr><td>Benny</td><td>0</td><td>1</td></tr><tr><td>Ben Hull</td><td>1</td><td>0</td></tr><tr><td>Chris</td><td>1</td><td>0</td></tr><tr><td>Dale</td><td>0</td><td>1</td></tr></tbody></table>
+<p class="bonus-caption">Matt did not play doubles.</p>
+</div>
+<div class="week-block"><h4>Bonus / non-league</h4><div class="muted-box">None recorded</div></div>
+</div></article><article class="week-card week6-celebration">
+<div class="week-top"><div><div class="week-number">Week 6</div>
+<div class="week-note">The breakthrough week. Benny gets his first singles wins, while Dale goes unbeaten in doubles.</div></div>
+<div class="week6-awards">
+<div aria-label="Week 6 singles joint winners: Benny, Ben Hull and Dale Cobley, all two wins and one loss" class="week6-singles-award">
+<div class="week6-award-heading"><span>🏸 SINGLES CHAMPIONS</span><span class="week6-tie">JOINT WINNERS · 2–1 EACH</span></div>
+<div class="week6-award-names">
+<div class="benny-marquee">
+<div class="benny-overline">✦ THE MOMENT HAS ARRIVED ✦</div>
+<div class="benny-headline"><span aria-hidden="true">🏆</span> BENNY <span aria-hidden="true">🏆</span></div>
+<div class="benny-caption">TWO SINGLES WINS! · 2–1</div>
+<i aria-hidden="true" class="twinkle t1">✦</i><i aria-hidden="true" class="twinkle t2">✧</i><i aria-hidden="true" class="twinkle t3">✦</i>
+</div>
+<div class="joint-winners"><span>ALSO JOINT WINNERS</span><strong>Ben Hull <em>&amp;</em> Dale</strong><small>2–1 each</small></div>
+</div>
+</div>
+<div class="week6-doubles-award"><span>DOUBLES CHAMPION</span><strong>Dale</strong><small>3–0 · unbeaten</small></div>
+</div></div>
+<div class="week-body">
+<div class="week-block"><h4>Singles</h4><ul class="compact-results"><li><strong>Benny</strong> beat Chris</li><li><strong>Benny</strong> beat Ben Hull</li><li><strong>Dale</strong> beat Benny</li><li><strong>Ben Hull</strong> beat Chris</li><li><strong>Dale</strong> beat Chris</li><li><strong>Ben Hull</strong> beat Dale</li></ul>
+<table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody><tr><td>Benny</td><td>2</td><td>1</td></tr><tr><td>Ben Hull</td><td>2</td><td>1</td></tr><tr><td>Chris</td><td>0</td><td>3</td></tr><tr><td>Dale</td><td>2</td><td>1</td></tr></tbody></table></div>
+<div class="week-block"><h4>Doubles</h4><ul class="compact-results"><li><strong>Benny + Dale</strong> beat Ben Hull + Chris</li><li><strong>Chris + Dale</strong> beat Benny + Ben Hull</li><li><strong>Ben Hull + Dale</strong> beat Benny + Chris</li></ul>
+<table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody><tr><td>Benny</td><td>1</td><td>2</td></tr><tr><td>Ben Hull</td><td>1</td><td>2</td></tr><tr><td>Chris</td><td>1</td><td>2</td></tr><tr><td>Dale</td><td>3</td><td>0</td></tr></tbody></table></div>
+<div class="week-block"><h4>Bonus / non-league</h4><div class="muted-box">None recorded</div></div>
+</div></article>
+<article class="week-card">
+<div class="week-top"><div><div class="week-number">Week 5</div><div class="week-note">Benny lost all singles and doubles. Dale swept singles. Ben Hull beat Christian in singles.</div></div>
+<div class="week-winners"><span>Singles <strong>Dale</strong> 3–0</span><span>Doubles <strong>Ben Hull / Chris / Dale</strong> 2–1 · joint</span></div></div>
+<div class="week-body">
+<div class="week-block"><h4>Singles</h4><ul class="compact-results"><li><strong>Ben Hull</strong> beat Benny</li><li><strong>Ben Hull</strong> beat Chris</li><li><strong>Chris</strong> beat Benny</li><li><strong>Dale</strong> beat Ben Hull</li><li><strong>Dale</strong> beat Benny</li><li><strong>Dale</strong> beat Chris</li></ul><table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody><tr><td>Benny</td><td>0</td><td>3</td></tr><tr><td>Ben Hull</td><td>2</td><td>1</td></tr><tr><td>Chris</td><td>1</td><td>2</td></tr><tr><td>Dale</td><td>3</td><td>0</td></tr></tbody></table></div>
+<div class="week-block"><h4>Doubles</h4><ul class="compact-results"><li><strong>Chris + Dale</strong> beat Benny + Ben Hull</li><li><strong>Ben Hull + Dale</strong> beat Benny + Chris</li><li><strong>Ben Hull + Chris</strong> beat Benny + Dale</li></ul><table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody><tr><td>Benny</td><td>0</td><td>3</td></tr><tr><td>Ben Hull</td><td>2</td><td>1</td></tr><tr><td>Chris</td><td>2</td><td>1</td></tr><tr><td>Dale</td><td>2</td><td>1</td></tr></tbody></table></div>
+<div class="week-block"><h4>Bonus / non-league</h4><ul class="compact-results"><li class="special-result"><span class="sport-chip">Pickleball</span><strong>Chris &amp; Benny</strong> beat a Gilf</li></ul><p class="bonus-caption">These results do not count towards badminton standings.</p></div>
+</div>
+</article>
+<article class="week-card">
+<div class="week-top"><div><div class="week-number">Week 4</div><div class="week-note">Three-player singles night. Each pairing played four times.</div></div>
+<div class="week-winners"><span>Singles <strong>Dale</strong> 7–1</span><span>Doubles <strong>Not played</strong></span></div></div>
+<div class="week-body">
+<div class="week-block"><h4>Singles</h4><ul class="compact-results"><li><strong>Chris</strong> beat Benny ×4</li><li><strong>Chris</strong> beat Dale</li><li><strong>Dale</strong> beat Benny ×4</li><li><strong>Dale</strong> beat Chris ×3</li></ul><table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody><tr><td>Benny</td><td>0</td><td>8</td></tr><tr><td>Chris</td><td>5</td><td>3</td></tr><tr><td>Dale</td><td>7</td><td>1</td></tr></tbody></table></div>
+<div class="week-block"><h4>Doubles</h4><div class="muted-box">Not played</div></div>
+<div class="week-block"><h4>Bonus / non-league</h4><div class="muted-box">None recorded</div></div>
+</div>
+</article>
+<article class="week-card">
+<div class="week-top"><div><div class="week-number">Week 3</div><div class="week-note">Ben Hull absent. Owen Jones joined the league.</div></div>
+<div class="week-winners"><span>Singles <strong>Dale</strong> 3–0</span><span>Doubles <strong>Chris</strong> 3–0</span></div></div>
+<div class="week-body">
+<div class="week-block"><h4>Singles</h4><ul class="compact-results"><li><strong>Chris</strong> beat Benny</li><li><strong>Dale</strong> beat Benny</li><li><strong>Dale</strong> beat Chris</li><li><strong>Dale</strong> beat Owen</li><li><strong>Owen</strong> beat Benny</li><li><strong>Owen</strong> beat Chris</li></ul><table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody><tr><td>Benny</td><td>0</td><td>3</td></tr><tr><td>Chris</td><td>1</td><td>2</td></tr><tr><td>Dale</td><td>3</td><td>0</td></tr><tr><td>Owen</td><td>2</td><td>1</td></tr></tbody></table></div>
+<div class="week-block"><h4>Doubles</h4><ul class="compact-results"><li><strong>Benny + Chris</strong> beat Dale + Owen</li><li><strong>Chris + Dale</strong> beat Benny + Owen</li><li><strong>Chris + Owen</strong> beat Benny + Dale</li></ul><table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody><tr><td>Benny</td><td>1</td><td>2</td></tr><tr><td>Chris</td><td>3</td><td>0</td></tr><tr><td>Dale</td><td>1</td><td>2</td></tr><tr><td>Owen</td><td>1</td><td>2</td></tr></tbody></table></div>
+<div class="week-block"><h4>Bonus / non-league</h4><div class="muted-box">None recorded</div></div>
+</div>
+</article>
+<article class="week-card">
+<div class="week-top"><div><div class="week-number">Week 2</div><div class="week-note">Standard four-player night.</div></div>
+<div class="week-winners"><span>Singles <strong>Chris</strong> 3–0</span><span>Doubles <strong>Dale</strong> 3–0</span></div></div>
+<div class="week-body">
+<div class="week-block"><h4>Singles</h4><ul class="compact-results"><li><strong>Ben Hull</strong> beat Benny</li><li><strong>Ben Hull</strong> beat Dale</li><li><strong>Chris</strong> beat Ben Hull</li><li><strong>Chris</strong> beat Benny</li><li><strong>Chris</strong> beat Dale</li><li><strong>Dale</strong> beat Benny</li></ul><table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody><tr><td>Benny</td><td>0</td><td>3</td></tr><tr><td>Ben Hull</td><td>2</td><td>1</td></tr><tr><td>Chris</td><td>3</td><td>0</td></tr><tr><td>Dale</td><td>1</td><td>2</td></tr></tbody></table></div>
+<div class="week-block"><h4>Doubles</h4><ul class="compact-results"><li><strong>Chris + Dale</strong> beat Benny + Ben Hull</li><li><strong>Ben Hull + Dale</strong> beat Benny + Chris</li><li><strong>Benny + Dale</strong> beat Ben Hull + Chris</li></ul><table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody><tr><td>Benny</td><td>1</td><td>2</td></tr><tr><td>Ben Hull</td><td>1</td><td>2</td></tr><tr><td>Chris</td><td>1</td><td>2</td></tr><tr><td>Dale</td><td>3</td><td>0</td></tr></tbody></table></div>
+<div class="week-block"><h4>Bonus / non-league</h4><div class="muted-box">None recorded</div></div>
+</div>
+</article>
+<article class="week-card">
+<div class="week-top"><div><div class="week-number">Week 1</div><div class="week-note">Standard four-player night.</div></div>
+<div class="week-winners"><span>Singles <strong>Dale</strong> 3–0</span><span>Doubles <strong>Ben Hull / Chris / Dale</strong> 2–1 · joint</span></div></div>
+<div class="week-body">
+<div class="week-block"><h4>Singles</h4><ul class="compact-results"><li><strong>Ben Hull</strong> beat Benny</li><li><strong>Chris</strong> beat Ben Hull</li><li><strong>Chris</strong> beat Benny</li><li><strong>Dale</strong> beat Ben Hull</li><li><strong>Dale</strong> beat Benny</li><li><strong>Dale</strong> beat Chris</li></ul><table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody><tr><td>Benny</td><td>0</td><td>3</td></tr><tr><td>Ben Hull</td><td>1</td><td>2</td></tr><tr><td>Chris</td><td>2</td><td>1</td></tr><tr><td>Dale</td><td>3</td><td>0</td></tr></tbody></table></div>
+<div class="week-block"><h4>Doubles</h4><ul class="compact-results"><li><strong>Chris + Dale</strong> beat Benny + Ben Hull</li><li><strong>Ben Hull + Dale</strong> beat Benny + Chris</li><li><strong>Ben Hull + Chris</strong> beat Benny + Dale</li></ul><table class="mini"><thead><tr><th>Player</th><th>W</th><th>L</th></tr></thead><tbody><tr><td>Benny</td><td>0</td><td>3</td></tr><tr><td>Ben Hull</td><td>2</td><td>1</td></tr><tr><td>Chris</td><td>2</td><td>1</td></tr><tr><td>Dale</td><td>2</td><td>1</td></tr></tbody></table></div>
+<div class="week-block"><h4>Bonus / non-league</h4><ul class="compact-results"><li><strong>Ben Hull</strong> beat Benny</li><li><strong>Dale</strong> beat Chris</li></ul><p class="bonus-caption">These results do not count towards badminton standings.</p></div>
+</div>
+</article></div></section>
+</main></div><script>const B=document.querySelectorAll('.tab-btn'),P=document.querySelectorAll('.tab-panel');B.forEach(b=>b.addEventListener('click',()=>{B.forEach(x=>x.classList.remove('active'));P.forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}));</script></body></html>
