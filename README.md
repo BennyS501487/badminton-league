@@ -23,4 +23,13 @@ A commit to `main` triggers the deploy. The public website is served from `publi
 2. Recalculate standings and head-to-head from the underlying match data.
 3. Update `public/index.html` and commit both files to `main`.
 
-Do not use the old Week 8 HTML download as the live source after this repository is connected.
+Keep the GitHub repository as the source of truth once Cloudflare is connected; update both `SCORES.md` and `public/index.html`.
+
+## Current edition — Week 9 (corrected)
+
+- Singles: Chris 3–0, Ben Hull 2–1, Dale 1–2, Benny 0–3.
+- Doubles: Benny + Chris beat Ben Hull + Dale; Benny + Dale beat Ben Hull + Chris; Chris + Dale beat Benny + Ben Hull.
+- Week 9 doubles player records: Benny, Chris and Dale 2–1; Ben Hull 0–3.
+- Complete cumulative records are recomputed in `SCORES.md`.
+
+To publish this update, upload/commit the **contents** of this repository to `main` (replace `public/index.html` and `SCORES.md` and keep `wrangler.jsonc` at the root). Cloudflare Workers Builds will deploy the commit automatically if already connected.
