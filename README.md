@@ -25,11 +25,16 @@ A commit to `main` triggers the deploy. The public website is served from `publi
 
 Keep the GitHub repository as the source of truth once Cloudflare is connected; update both `SCORES.md` and `public/index.html`.
 
-## Current edition — Week 9 (corrected)
+## Current edition — Week 10 (corrected)
 
 - Singles: Chris 3–0, Ben Hull 2–1, Dale 1–2, Benny 0–3.
 - Doubles: Benny + Chris beat Ben Hull + Dale; Benny + Dale beat Ben Hull + Chris; Chris + Dale beat Benny + Ben Hull.
-- Week 9 doubles player records: Benny, Chris and Dale 2–1; Ben Hull 0–3.
+- Week 10 doubles player records: Benny, Chris and Dale 2–1; Ben Hull 0–3.
 - Complete cumulative records are recomputed in `SCORES.md`.
 
 To publish this update, upload/commit the **contents** of this repository to `main` (replace `public/index.html` and `SCORES.md` and keep `wrangler.jsonc` at the root). Cloudflare Workers Builds will deploy the commit automatically if already connected.
+
+
+## Week 10 update
+
+Three-player singles-only week, ten recorded matches. Dale 4–2, Ben Hull 4–3, Benny 2–5. Singles winner Dale on weekly win percentage; no doubles. The site retains all prior weeks and special results.

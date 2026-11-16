@@ -1,6 +1,6 @@
 # Badminton League — canonical score ledger
 
-Updated through **Week 9**. This is the complete scored match history used to rebuild the scoreboard, standings and head-to-head records.
+Updated through **Week 10**. This is the complete scored match history used to rebuild the scoreboard, standings and head-to-head records.
 
 ## Players
 
@@ -16,9 +16,9 @@ Updated through **Week 9**. This is the complete scored match history used to re
 - Singles games count one win and one loss across two opponents.
 - Doubles count a win for **each** winning partner and a loss for **each** losing partner.
 - Bonus games, including Week 5 pickleball, are excluded from league rankings and singles head-to-head.
-- All cumulative standings are ranked by **win percentage**, then wins, then fewer losses. No matches played shows **—**.
+- All cumulative standings are ranked by **win percentage**, then wins, then fewer losses. No matches played shows **—**. When weekly winners tie on total wins but have different win percentages, the higher weekly win percentage takes the title (Week 10).
 - An absent player has no wins or losses for that week.
-- Standard four-player weeks (1, 2, 3, 5, 6, 8, 9) use one singles round robin and three rotating-partner doubles games. Week 4 used four singles matches per pairing; Week 7 used five singles players and only one doubles game.
+- Four-player weeks (1, 2, 3, 5, 6, 8, 9) use one singles round robin and three rotating-partner doubles games. Week 4 used four singles matches per pairing; Week 7 used five singles players and only one doubles game; Week 10 used three singles players and ten recorded games.
 - A match's **points score** (such as Week 8 Dale 11–1 Chris) is independent of match win/loss totals.
 - In Week 8, “Chris beat Ben” is recorded as **Chris beat Ben Hull**, because Ben Bodie is explicitly identified as Benny. This assumption should be confirmed if the original message meant something else.
 
@@ -514,29 +514,65 @@ Standard four-player night. Benny lost all three singles; Chris won all three. B
 
 ---
 
-## Cumulative after Week 9
+## Week 10
+
+**Attendees:** Benny, Ben Hull, Dale Cobley. Chris, Owen and Matt were absent.
+
+Three-player singles-only night. The user listed ten matches (not a standard equal-count round robin). Their typo “hen” has been interpreted as **Ben Hull**. Match counts preserve the supplied results exactly.
+
+### Singles matches
+
+| Winner | Loser | Count |
+|---|---|---:|
+| Ben Hull | Benny | 2 |
+| Benny | Ben Hull | 2 |
+| Ben Hull | Dale Cobley | 2 |
+| Dale Cobley | Ben Hull | 1 |
+| Dale Cobley | Benny | 3 |
+
+**Singles results**
+
+| Player | W | L | Win % |
+|---|---:|---:|---:|
+| Dale Cobley | 4 | 2 | 66.7% |
+| Ben Hull | 4 | 3 | 57.1% |
+| Benny | 2 | 5 | 28.6% |
+
+**Singles winner:** Dale Cobley (4–2, 66.7%). Dale and Ben Hull tied for the most wins (four each); Dale is awarded the weekly title on win percentage, consistent with the league's percentage-first ranking rule.
+
+### Doubles matches
+
+Not played.
+
+### Bonus / non-league matches
+
+- None recorded.
+
+---
+
+## Cumulative after Week 10
 
 ### Overall standings (singles + doubles)
 
 | Rank | Player | Wins | Losses | Win % | Weeks played |
 |---:|---|---:|---:|---:|---:|
-| 1 | Dale Cobley | 43 | 13 | 76.8% | 9 |
+| 1 | Dale Cobley | 47 | 15 | 75.8% | 10 |
 | 2 | Christian Barton | 33 | 24 | 57.9% | 9 |
-| 3 | Ben Hull | 22 | 21 | 51.2% | 7 |
-| 4 | Owen Jones | 3 | 3 | 50% | 1 |
-| 5 | Benny | 10 | 46 | 17.9% | 9 |
-| 6 | Matt | 0 | 4 | 0% | 1 |
+| 3 | Ben Hull | 26 | 24 | 52.0% | 8 |
+| 4 | Owen Jones | 3 | 3 | 50.0% | 1 |
+| 5 | Benny | 12 | 51 | 19.0% | 10 |
+| 6 | Matt | 0 | 4 | 0.0% | 1 |
 
 ### Singles standings
 
 | Rank | Player | Wins | Losses | Win % |
 |---:|---|---:|---:|---:|
-| 1 | Dale Cobley | 28 | 6 | 82.4% |
+| 1 | Dale Cobley | 32 | 8 | 80.0% |
 | 2 | Owen Jones | 2 | 1 | 66.7% |
-| 3 | Christian Barton | 19 | 16 | 54.3% |
-| 4 | Ben Hull | 13 | 11 | 54.2% |
-| 5 | Benny | 5 | 29 | 14.7% |
-| 6 | Matt | 0 | 4 | 0% |
+| 3 | Ben Hull | 17 | 14 | 54.8% |
+| 4 | Christian Barton | 19 | 16 | 54.3% |
+| 5 | Benny | 7 | 34 | 17.1% |
+| 6 | Matt | 0 | 4 | 0.0% |
 
 ### Doubles standings
 
@@ -551,14 +587,14 @@ Standard four-player night. Benny lost all three singles; Chris won all three. B
 
 ### Singles head-to-head matrix
 
-Wins–losses from the **row player’s** perspective. Bonus matches excluded.
+Wins–losses from the **row player’s** perspective. Bonus games excluded.
 
 | Player | Benny | Ben Hull | Christian Barton | Dale Cobley | Owen Jones | Matt |
 |---|---:|---:|---:|---:|---:|---:|
-| Benny | — | 3–5 | 1–11 | 0–12 | 0–1 | 1–0 |
-| Ben Hull | 5–3 | — | 4–4 | 3–4 | — | 1–0 |
+| Benny | — | 5–7 | 1–11 | 0–15 | 0–1 | 1–0 |
+| Ben Hull | 7–5 | — | 4–4 | 5–5 | — | 1–0 |
 | Christian Barton | 11–1 | 4–4 | — | 3–10 | 0–1 | 1–0 |
-| Dale Cobley | 12–0 | 4–3 | 10–3 | — | 1–0 | 1–0 |
+| Dale Cobley | 15–0 | 5–5 | 10–3 | — | 1–0 | 1–0 |
 | Owen Jones | 1–0 | — | 1–0 | 0–1 | — | — |
 | Matt | 0–1 | 0–1 | 0–1 | 0–1 | — | — |
 
@@ -575,5 +611,6 @@ Wins–losses from the **row player’s** perspective. Bonus matches excluded.
 | 7 | Dale Cobley (5–0) | Ben Hull + Chris (1–0; one match) |
 | 8 | Dale Cobley (3–0) | Dale / Chris / Ben Hull (2–1 joint) |
 | 9 | Chris (3–0) | Benny / Chris / Dale (2–1 joint) |
+| 10 | Dale Cobley (4–2; 66.7%, win-% tiebreak over Ben Hull 4–3) | Not played |
 
-**Audit:** 67 scored singles matches and 22 scored doubles matches. Every singles win matches one singles loss (67 each); every doubles match credits two wins and two losses (44 each). Benny singles 5–29, doubles 5–17, overall 10–46. Ben Hull singles 13–11, doubles 9–10, overall 22–21. Week 5 pickleball excluded. Week 6 golden spotlight preserved. Week 8 record 11–1 game-point score preserved.
+**Audit:** 77 scored singles matches and 22 scored doubles matches. Each singles match produces one winner and one loser (77 each). Each doubles match credits two wins and two losses (44 each). Benny singles 7–34, doubles 5–17, overall 12–51. Ben Hull singles 17–14, doubles 9–10, overall 26–24. Week 5 pickleball excluded. Week 6 spotlight, Week 8 11–1 game-point score, and Week 9 corrected doubles preserved.
