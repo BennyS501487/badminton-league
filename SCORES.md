@@ -1,6 +1,6 @@
 # Badminton League — canonical score ledger
 
-Updated through **Week 10**. This is the complete scored match history used to rebuild the scoreboard, standings and head-to-head records.
+Updated through **Week 11**. This is the complete scored match history used to rebuild the scoreboard, standings and head-to-head records.
 
 ## Players
 
@@ -19,6 +19,7 @@ Updated through **Week 10**. This is the complete scored match history used to r
 - All cumulative standings are ranked by **win percentage**, then wins, then fewer losses. No matches played shows **—**. When weekly winners tie on total wins but have different win percentages, the higher weekly win percentage takes the title (Week 10).
 - An absent player has no wins or losses for that week.
 - Four-player weeks (1, 2, 3, 5, 6, 8, 9) use one singles round robin and three rotating-partner doubles games. Week 4 used four singles matches per pairing; Week 7 used five singles players and only one doubles game; Week 10 used three singles players and ten recorded games.
+- Week 11 singles are recorded provisionally as the usual four-player round robin plus an additional Chris-over-Benny game and an additional Dale-over-Ben-Hull game. The user explicitly supplied the two repeat wins and the unbeaten/lost-all outcomes; the unreported pairings are inferred.
 - A match's **points score** (such as Week 8 Dale 11–1 Chris) is independent of match win/loss totals.
 - In Week 8, “Chris beat Ben” is recorded as **Chris beat Ben Hull**, because Ben Bodie is explicitly identified as Benny. This assumption should be confirmed if the original message meant something else.
 
@@ -550,39 +551,95 @@ Not played.
 
 ---
 
-## Cumulative after Week 10
+
+## Week 11
+
+**Attendees:** Benny, Ben Hull, Christian Barton, Dale Cobley. Owen and Matt were absent.
+
+Doubles: Benny and Ben Hull won together; Benny lost with Chris and with Dale. Singles: Benny lost every match, including two to Chris; Dale won every match, including two against Ben Hull; Chris beat Ben Hull.
+
+**Singles interpretation:** The statement does not specify every pairing's match count. For this update, use one standard four-player round robin (one match per pairing) plus two explicitly reported extra games: Chris beat Benny again, and Dale beat Ben Hull again. This assumption may need adjustment if other extra matches were played.
+
+### Singles matches
+
+| Winner | Loser | Count |
+|---|---|---:|
+| Ben Hull | Benny | 1 |
+| Christian Barton | Ben Hull | 1 |
+| Christian Barton | Benny | 2 |
+| Dale Cobley | Ben Hull | 2 |
+| Dale Cobley | Benny | 1 |
+| Dale Cobley | Christian Barton | 1 |
+
+**Singles results**
+
+| Player | W | L | Win % |
+|---|---:|---:|---:|
+| Dale Cobley | 4 | 0 | 100.0% |
+| Christian Barton | 3 | 1 | 75.0% |
+| Ben Hull | 1 | 3 | 25.0% |
+| Benny | 0 | 4 | 0.0% |
+
+**Singles winner:** Dale Cobley (4–0).
+
+### Doubles matches
+
+| Winners | Losers |
+|---|---|
+| Benny + Ben Hull | Christian Barton + Dale Cobley |
+| Ben Hull + Dale Cobley | Benny + Christian Barton |
+| Ben Hull + Christian Barton | Benny + Dale Cobley |
+
+**Doubles results**
+
+| Player | W | L |
+|---|---:|---:|
+| Ben Hull | 3 | 0 |
+| Benny | 1 | 2 |
+| Christian Barton | 1 | 2 |
+| Dale Cobley | 1 | 2 |
+
+**Doubles winner:** Ben Hull (3–0).
+
+### Bonus / non-league matches
+
+- None recorded.
+
+---
+
+## Cumulative after Week 11
 
 ### Overall standings (singles + doubles)
 
 | Rank | Player | Wins | Losses | Win % | Weeks played |
 |---:|---|---:|---:|---:|---:|
-| 1 | Dale Cobley | 47 | 15 | 75.8% | 10 |
-| 2 | Christian Barton | 33 | 24 | 57.9% | 9 |
-| 3 | Ben Hull | 26 | 24 | 52.0% | 8 |
+| 1 | Dale Cobley | 52 | 17 | 75.4% | 11 |
+| 2 | Christian Barton | 37 | 27 | 57.8% | 10 |
+| 3 | Ben Hull | 30 | 27 | 52.6% | 9 |
 | 4 | Owen Jones | 3 | 3 | 50.0% | 1 |
-| 5 | Benny | 12 | 51 | 19.0% | 10 |
+| 5 | Benny | 13 | 57 | 18.6% | 11 |
 | 6 | Matt | 0 | 4 | 0.0% | 1 |
 
 ### Singles standings
 
 | Rank | Player | Wins | Losses | Win % |
 |---:|---|---:|---:|---:|
-| 1 | Dale Cobley | 32 | 8 | 80.0% |
+| 1 | Dale Cobley | 36 | 8 | 81.8% |
 | 2 | Owen Jones | 2 | 1 | 66.7% |
-| 3 | Ben Hull | 17 | 14 | 54.8% |
-| 4 | Christian Barton | 19 | 16 | 54.3% |
-| 5 | Benny | 7 | 34 | 17.1% |
+| 3 | Christian Barton | 22 | 17 | 56.4% |
+| 4 | Ben Hull | 18 | 17 | 51.4% |
+| 5 | Benny | 7 | 38 | 15.6% |
 | 6 | Matt | 0 | 4 | 0.0% |
 
 ### Doubles standings
 
 | Rank | Player | Wins | Losses | Win % |
 |---:|---|---:|---:|---:|
-| 1 | Dale Cobley | 15 | 7 | 68.2% |
-| 2 | Christian Barton | 14 | 8 | 63.6% |
-| 3 | Ben Hull | 9 | 10 | 47.4% |
+| 1 | Dale Cobley | 16 | 9 | 64.0% |
+| 2 | Christian Barton | 15 | 10 | 60.0% |
+| 3 | Ben Hull | 12 | 10 | 54.5% |
 | 4 | Owen Jones | 1 | 2 | 33.3% |
-| 5 | Benny | 5 | 17 | 22.7% |
+| 5 | Benny | 6 | 19 | 24.0% |
 | 6 | Matt | 0 | 0 | — |
 
 ### Singles head-to-head matrix
@@ -591,10 +648,10 @@ Wins–losses from the **row player’s** perspective. Bonus games excluded.
 
 | Player | Benny | Ben Hull | Christian Barton | Dale Cobley | Owen Jones | Matt |
 |---|---:|---:|---:|---:|---:|---:|
-| Benny | — | 5–7 | 1–11 | 0–15 | 0–1 | 1–0 |
-| Ben Hull | 7–5 | — | 4–4 | 5–5 | — | 1–0 |
-| Christian Barton | 11–1 | 4–4 | — | 3–10 | 0–1 | 1–0 |
-| Dale Cobley | 15–0 | 5–5 | 10–3 | — | 1–0 | 1–0 |
+| Benny | — | 5–8 | 1–13 | 0–16 | 0–1 | 1–0 |
+| Ben Hull | 8–5 | — | 4–5 | 5–7 | — | 1–0 |
+| Christian Barton | 13–1 | 5–4 | — | 3–11 | 0–1 | 1–0 |
+| Dale Cobley | 16–0 | 7–5 | 11–3 | — | 1–0 | 1–0 |
 | Owen Jones | 1–0 | — | 1–0 | 0–1 | — | — |
 | Matt | 0–1 | 0–1 | 0–1 | 0–1 | — | — |
 
@@ -612,5 +669,6 @@ Wins–losses from the **row player’s** perspective. Bonus games excluded.
 | 8 | Dale Cobley (3–0) | Dale / Chris / Ben Hull (2–1 joint) |
 | 9 | Chris (3–0) | Benny / Chris / Dale (2–1 joint) |
 | 10 | Dale Cobley (4–2; 66.7%, win-% tiebreak over Ben Hull 4–3) | Not played |
+| 11 | Dale Cobley (4–0) | Ben Hull (3–0) |
 
-**Audit:** 77 scored singles matches and 22 scored doubles matches. Each singles match produces one winner and one loser (77 each). Each doubles match credits two wins and two losses (44 each). Benny singles 7–34, doubles 5–17, overall 12–51. Ben Hull singles 17–14, doubles 9–10, overall 26–24. Week 5 pickleball excluded. Week 6 spotlight, Week 8 11–1 game-point score, and Week 9 corrected doubles preserved.
+**Audit:** 85 scored singles matches and 25 scored doubles matches. Singles wins/losses reconcile at 85 each; doubles player wins/losses reconcile at 50 each. Historical Weeks 1–10 preserved unchanged. Week 5 pickleball, Week 6 Benny spotlight, Week 8 11–1 point score and Week 9 corrected doubles remain intact.
